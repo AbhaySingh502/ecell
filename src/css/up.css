@@ -1,0 +1,11 @@
+.semi {
+
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.sv {
+    position: relative;
+    z-index: 0;
+}

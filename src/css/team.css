@@ -1,0 +1,48 @@
+.team-card {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.team-card.card-clicked {
+    transform: rotateY(180deg);
+}
+
+.team-overlay {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    background-color: #0753B7;
+    /* Blue background color */
+    border-radius: 50%;
+    perspective: 1000px;
+}
+
+.team-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-text {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.team-name {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.team-position {
+    display: block;
+    font-size: 12px;
+}
