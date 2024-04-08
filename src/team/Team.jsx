@@ -1,97 +1,126 @@
 import React from 'react'
+import team_data from "../data/team_data"
+import Tilt from 'react-parallax-tilt'
+import TeamCard from './TeamCard'
+import Header from '../components/Header';
 
 function Team() {
-  return (
-    <div className='team'>
-      <div className="main d-flex justify-content-center align-items-center" style={{ height: "100vh" }}>
-
-        <div className="row w-100 d-flex justify-content-around">
-
-          <div className="column d-flex justify-content-center align-items-center mt-3 position-relative " style={{ height: "240px", width: "240px", backgroundColor: "#06479d", borderRadius: "10px" }}>
-
-            <div className="img position-absolute z-1" style={{ height: "140px", width: "140px", top: "-66px" }}>
-              <img className='h-100 w-100 object-fit-cover overflow-hidden rounded-circle' src="./assetes/basketball.jpg" alt="" />
-            </div>
-            <div className="text d-flex flex-column">
-              <span className='fs-2 text-white'>Name</span>
-              <span className='fs-5 text-white'>Name</span>
-
-            </div>
-
-          </div>
-
-          <div className="column d-flex justify-content-center align-items-center mt-3 position-relative " style={{ height: "240px", width: "240px", backgroundColor: "#06479d", borderRadius: "10px" }}>
-
-            <div className="img position-absolute z-1" style={{ height: "140px", width: "140px", top: "-66px" }}>
-              <img className='h-100 w-100 object-fit-cover overflow-hidden rounded-circle' src="./assetes/basketball.jpg" alt="" />
-            </div>
-            <div className="text d-flex flex-column">
-              <span className='fs-2 text-white'>Name</span>
-              <span className='fs-5 text-white'>Name</span>
-
+    return (
+        <div><div
+            style={{
+                overflowX: "hidden",
+            }}
+        >
+            <div style={{
+                position: "absolute",
+                top: "0px",
+                zIndex: "2",
+                width: "100%",
+                height: "100vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "rgba(0, 0, 0, .2)",
+            }}>
+                <h1 className="our-team-heading" style={{ fontFamily: "MullerBold", fontSize: "5em", textAlign: "center" }}>OUR TEAM</h1>
             </div>
 
-          </div>
-
-          <div className="column d-flex justify-content-center align-items-center mt-3 position-relative " style={{ height: "240px", width: "240px", backgroundColor: "#06479d", borderRadius: "10px" }}>
-
-            <div className="img position-absolute z-1" style={{ height: "140px", width: "140px", top: "-66px" }}>
-              <img className='h-100 w-100 object-fit-cover overflow-hidden rounded-circle' src="./assetes/basketball.jpg" alt="" />
-            </div>
-            <div className="text d-flex flex-column">
-              <span className='fs-2 text-white'>Name</span>
-              <span className='fs-5 text-white'>Name</span>
-
+            <div className="team-header" style={{
+                width: "100%",
+                height: "100vh",
+                zIndex: "1",
+            }}>
             </div>
 
-          </div>
+            <img style={{
+                width: "100%",
+                height: "100vh",
+                zIndex: "-1",
+                position: "fixed",
+                top: "0px",
+                left: "0px",
+                opacity: "0.4"
+            }}
+                src='./assetes/teamimage.jpg' />
 
+            <h2 style={{
+                paddingTop: "4em",
+                width: "100%",
+                textAlign: "center",
+                marginBottom: "2em"
+            }}
+
+            >Faculty in charge(FIC)</h2>
+            <div style={{
+                display: "flex",
+                justifyContent: "center",
+                textAlign: "center",
+                overflowWrap: "break-word"
+            }}>
+                {team_data.slice(0, 1).map((item, index) => {
+                    return (
+                        <Tilt style={{ display: "inline-block" }} tiltMaxAngleX={"7"} tiltMaxAngleY={"7"}>
+                            <TeamCard {...item} />
+                        </Tilt>
+                    )
+                })}
+            </div>
+            <h2 style={{
+                width: "100%",
+                textAlign: "center",
+                marginBottom: "2em"
+            }}
+            >Presidents</h2>
+            <div style={{
+                textAlign: "center",
+                overflowWrap: "break-word"
+            }}>
+                {team_data.slice(1, 3).map((item, index) => {
+                    return (
+                        <Tilt style={{ display: "inline-block" }} tiltMaxAngleX={"7"} tiltMaxAngleY={"7"}>
+                            <TeamCard {...item} />
+                        </Tilt>
+                    )
+                })}
+            </div>
+            <h2 style={{
+                width: "100%",
+                textAlign: "center",
+                marginBottom: "2em"
+            }}
+            >Team Heads</h2>
+            <div style={{
+                textAlign: "center",
+                overflowWrap: "break-word"
+            }}>
+                {team_data.slice(3, 5).map((item, index) => {
+                    return (
+                        <Tilt style={{ display: "inline-block" }} tiltMaxAngleX={"7"} tiltMaxAngleY={"7"}>
+                            <TeamCard {...item} />
+                        </Tilt>
+                    )
+                })}
+            </div>
+            <h2 style={{
+                width: "100%",
+                textAlign: "center",
+                marginBottom: "2em"
+            }}
+            >Team Heads</h2>
+            <div style={{
+                textAlign: "center",
+                overflowWrap: "break-word"
+            }}>
+                {team_data.slice(5, 7).map((item, index) => {
+                    return (
+                        <Tilt style={{ display: "inline-block" }} tiltMaxAngleX={"7"} tiltMaxAngleY={"7"}>
+                            <TeamCard {...item} />
+                        </Tilt>
+                    )
+                })}
+            </div>
         </div>
-        <div className="row w-100 d-flex justify-content-around">
-
-          <div className="column d-flex justify-content-center align-items-center mt-3 position-relative " style={{ height: "240px", width: "240px", backgroundColor: "#06479d", borderRadius: "10px" }}>
-
-            <div className="img position-absolute z-1" style={{ height: "140px", width: "140px", top: "-66px" }}>
-              <img className='h-100 w-100 object-fit-cover overflow-hidden rounded-circle' src="./assetes/basketball.jpg" alt="" />
-            </div>
-            <div className="text d-flex flex-column">
-              <span className='fs-2 text-white'>Name</span>
-              <span className='fs-5 text-white'>Name</span>
-
-            </div>
-
-          </div>
-
-          <div className="column d-flex justify-content-center align-items-center mt-3 position-relative " style={{ height: "240px", width: "240px", backgroundColor: "#06479d", borderRadius: "10px" }}>
-
-            <div className="img position-absolute z-1" style={{ height: "140px", width: "140px", top: "-66px" }}>
-              <img className='h-100 w-100 object-fit-cover overflow-hidden rounded-circle' src="./assetes/basketball.jpg" alt="" />
-            </div>
-            <div className="text d-flex flex-column">
-              <span className='fs-2 text-white'>Name</span>
-              <span className='fs-5 text-white'>Name</span>
-
-            </div>
-
-          </div>
-
-          <div className="column d-flex justify-content-center align-items-center mt-3 position-relative " style={{ height: "240px", width: "240px", backgroundColor: "#06479d", borderRadius: "10px" }}>
-
-            <div className="img position-absolute z-1" style={{ height: "140px", width: "140px", top: "-66px" }}>
-              <img className='h-100 w-100 object-fit-cover overflow-hidden rounded-circle' src="./assetes/basketball.jpg" alt="" />
-            </div>
-            <div className="text d-flex flex-column">
-              <span className='fs-2 text-white'>Name</span>
-              <span className='fs-5 text-white'>Name</span>
-
-            </div>
-
-          </div>
-
         </div>
-      </div>
-    </div>
-  )
+    );
 }
-
 export default Team

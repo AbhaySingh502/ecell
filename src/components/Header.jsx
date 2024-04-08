@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
@@ -22,29 +23,27 @@ function Header() {
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item me-4">
-                                    <a class="nav-link active text-white" aria-current="page" href="#">HOME</a>
+                                    <Link to="/" className="nav-link active text-white text-decoration-none">HOME</Link>
                                 </li>
 
                                 <li class="nav-item dropdown me-4">
-                                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <Link to='/About' class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         ABOUT US
-                                    </a>
+                                    </Link>
+
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">VISION</a></li>
-                                        <li><a class="dropdown-item" href="#">TEAM</a></li>
-                                        <li><a class="dropdown-item" href="#">GALLERY</a></li>
+                                        <li><Link to="/Vision" className="dropdown-item nav-link active text-white text-decoration-none">VISION</Link></li>
+                                        <li><Link to="/Team" className="dropdown-item nav-link active text-white text-decoration-none">TEAM</Link></li>
+                                        <li><Link to="/Gallery" className="dropdown-item nav-link active text-white text-decoration-none">GALLERY</Link></li>
                                     </ul>
 
 
                                 </li>
                                 <li class="nav-item me-4">
-                                    <a class="nav-link text-white" href="#">EVENTS</a>
+                                    <Link to="/Initiatives" className="dropdown-item nav-link active text-white text-decoration-none">INITIATIVES</Link>
                                 </li>
                                 <li class="nav-item me-4">
-                                    <a class="nav-link text-white" href="#">CONTACT US</a>
-                                </li>
-                                <li class="nav-item me-4">
-                                    <a class="nav-link text-white" href="#">UDYAMISTAV'24</a>
+                                    <Link to="/Form" className="dropdown-item nav-link active text-white text-decoration-none">CONTACT US</Link>
                                 </li>
 
                             </ul>

@@ -26,7 +26,6 @@ const imageData = [
 export function Gallery() {
     return (
         <>
-            <Header />
             <div className="gallery_crousel m-4">
                 {/* <Crousel /> */}
             </div>
